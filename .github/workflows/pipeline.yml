@@ -27,6 +27,8 @@ jobs:
           command: npm run test:e2e
           start: npm run start-prod
           wait-on: http://localhost:5000
+      - name: deploy-conf
+        run: git remote add heroku https://git.heroku.com/shielded-wildwood-24276.git
       - name: deploy
         uses: akhileshns/heroku-deploy@v3.9.9
         with:
