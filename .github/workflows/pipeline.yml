@@ -33,4 +33,4 @@ jobs:
             heroku_api_key: ${{secrets.HEROKU_API_KEY}}
             heroku_app_name: shielded-wildwood-24276
             heroku_email: ${{secrets.HEROKU_LOGIN_NAME}}
-            healthcheck: "https://shielded-wildwood-24276.herokuapp.com/health"
+            healthcheck: "https://shielded-wildwood-24276.herokuapp.com/health2"
