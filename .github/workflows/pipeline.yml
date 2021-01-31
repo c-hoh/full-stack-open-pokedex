@@ -35,3 +35,4 @@ jobs:
             heroku_email: ${{secrets.HEROKU_LOGIN_NAME}}
             healthcheck: "https://shielded-wildwood-24276.herokuapp.com/health"
             checkstring: "ok"
+            rollbackonhealthcheckfailed: true
