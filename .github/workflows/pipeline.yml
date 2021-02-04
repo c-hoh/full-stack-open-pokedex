@@ -44,8 +44,8 @@ jobs:
         if: ${{ github.event_name == 'push' }}
         uses: anothrNick/github-tag-action@1.33.0
         uses: actions/checkout@v2
-          with:
-            fetch-depth: '0'
+        with:
+          fetch-depth: '0'
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           DEFAULT_BUMP: patch
