@@ -13,8 +13,6 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: '0'
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
@@ -45,6 +43,9 @@ jobs:
       - name: bump version and tag
         if: ${{ github.event_name == 'push' }}
         uses: anothrNick/github-tag-action@1.33.0
+        uses: actions/checkout@v2
+          with:
+            fetch-depth: '0'
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           DEFAULT_BUMP: patch
